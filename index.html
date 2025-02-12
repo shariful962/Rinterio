@@ -1,27 +1,127 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rinterio</title>
-    <!-- fontawesome cdn  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <!-- google font link  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
-    <!-- tailwind cdn  -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-      @theme {
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rinterio</title>
+  <!-- fontawesome cdn  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- google font link  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+  <!-- custom css link  -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- tailwind cdn  -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
         --color-clifford: #da373d;
+        --color-gray4: #737373;
+        --color-gray5: #494949;
+        --color-gray6: #212121;
+        --color-gray7: #1C1C1C;
+        --color-Green: #ABEF5F;
+        --font-Primary: "Manrope", serif;
       }
+      .symbol {
+        @apply h-8 w-8 rounded-full flex justify-center items-center;
+      }
+      
+     
     </style>
 </head>
-<body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+
+<body class="font-Primary bg-[#F4F4F4]">
+  <header class="py-5">
+    <nav class="container md:container mx-auto flex lg:justify-between items-center">
+      <div class="logo flex-1 ml-3 lg:ml-0">
+        <div class="flex gap-2 items-center">
+          <div class="symbol bg-Green ">
+            <span class="rotate-[-45deg]">
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </div>
+          <h1 class="text-[2rem] font-extrabold text-gray6">
+            Rinterio
+          </h1>
+        </div>
+      </div>
+      <div class="menu hidden lg:block">
+        <ul class="flex items-center">
+          <li class="mr-9">
+            <a href="" class="font-base font-extrabold text-gray6">Home</a>
+          </li>
+          <li>
+            <a href="" class="font-base font-normal text-gray4">Services</a>
+          </li>
+          <li class="mr-9">
+            <a href="" class="font-base font-normal text-gray4">Portfolio</a>
+          </li>
+          <li class="mr-9">
+            <a href="" class="font-base font-normal text-gray4">Blogs</a>
+          </li>
+          <li class="mr-9">
+            <a href="" class="font-base font-normal text-gray4">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-right hidden md:block">
+        <div class="flex items-center">
+          <div class="icon flex">
+            <div class="symbol bg-white mr-3">
+              <span class="text-gray4"><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+            <div class="symbol bg-white mr-3">
+              <span class="text-xl text-gray4"><i class="fa-solid fa-cart-shopping"></i></span>
+            </div>
+          </div>
+          <div class="div">
+            <button class="md:mr-3 lg:mr-0 py-3 px-5 bg-Green border-none rounded-[2rem] font-extrabold text-xl text-gray7">
+              Book Consult <span class="w-8 h-8 bg-gray7 text-white inline-flex items-center justify-center rounded-full ml-1">
+                <i class=" rotate-[-45deg] fa-solid fa-arrow-right"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-icon bg-white h-12 w-12 rounded-full border border-gray4 flex items-center justify-center lg:hidden mr-3">
+        <div class="w-[25px]">
+          <div class="line w-full h-[3px] bg-gray4 mb-[5px]"></div>
+          <div class="line w-full h-[3px] bg-gray4 mb-[5px]"></div>
+          <div class="line w-full h-[3px] bg-gray4 "></div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- banner section  -->
+    <div class="banner">
+      <div class="banner-content mt-8">
+        <div class="banner-image text-center">
+          <img class="inline-block" src="./assets/banner.png" alt="banner-image">
+        </div>
+        <div class="banner-text text-center mt-6">
+          <h1 class="text-5xl lg:text-[4rem] text-gray6 font-extrabold leading-[56px] lg:leading-[83px] mb-6">
+            A barn house of this design has a <br class="hidden lg:block"> striking appearance
+          </h1>
+          <p class="text-base font-medium leading-[26px] text-gray5 mb-8">
+            The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal <br class="hidden lg:block"> accents, and large windows that flood the space with natural light.
+          </p>
+          <button class="banner-btn py-3 px-5 rounded-[2rem] font-extrabold text-xl text-gray7">
+            View Details <span class="w-8 h-8 bg-Green text-white inline-flex items-center justify-center rounded-full ml-1">
+              <i class=" rotate-[-45deg] fa-solid fa-arrow-right"></i>
+            </span>
+          </button>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+  <main></main>
+  <footer></footer>
 </body>
+
 </html>
